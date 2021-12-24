@@ -14,38 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function(){
-    return view('welcome');
-});*/
-
-//Route::view('/jogos', 'jogos', ['name' => 'GTA']);
-
-/*Route::get('/jogos/{name?}', function($name = null){
-    return view('jogos', ['name' => $name]);
-});*/
-
-/*Route::get('/jogos/{name?}', function($name = null){
-    return view('jogos', ['name' => $name]);
-})->where('name', '[A-Za-z]+'); // faz com que a rota apenas aceite letras*/
-
-/*Route::get('/jogos/{id?}', function($id = null){
-    return view('jogos', ['id' => $id]);
-})->where('id', '[0-9]+'); // faz com que a rota apenas aceite numeros*/
-
-/*Route::get('/jogos/{id?}/{name?}', function($id = null, $name = null){
-    return view('jogos', ['id' => $id, 'name' => $name]);
-})->where(['id'=> '[0-9]+', 'name' => '[A-Za-z]+']); // aceitando numeros e letras*/
-/*
-
-Route::get('/', function(){
-    return view('welcome');
-})->name('home-index'); // Atribuido um nome a rota
-
-Route::get('/jogos', [jogosController::class, 'index']);*/
-
-
-//SISTEMA
-
 Route::prefix('jogos')->group(function(){//criando grupo de rotas
     Route::get('/', [jogosController::class, 'index'])->name('jogos-index');
     Route::get('/create', [jogosController::class, 'create'])->name('jogos-create');
@@ -57,6 +25,6 @@ Route::prefix('jogos')->group(function(){//criando grupo de rotas
 
 
 
-Route::fallback(function(){ // Caso uma rota não exista ele cai aqui
+Route::fallback(function(){
     return view('404');
 });

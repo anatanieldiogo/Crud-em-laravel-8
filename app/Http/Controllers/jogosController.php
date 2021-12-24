@@ -11,11 +11,8 @@ class jogosController extends Controller
 
     public function index()
     {
-
-        //dd('jogos');// mostra uma variavel ou debuga elas...
         $jogos = Jogo::all();
         $jogos = Jogo::orderBy('id', 'desc')->get();
-        //dd($jogos);
         return view('/jogos.index', ['jogos' => $jogos]);
     }
 

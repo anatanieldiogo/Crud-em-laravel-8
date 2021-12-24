@@ -15,6 +15,4 @@ class Jogo extends Model
         'ano_criacao',
         'valor'
     ];
-
-    //protected $dates = ['date'];
 }

@@ -7,6 +7,6 @@
     <title>404</title>
 </head>
 <body>
-    <h1>A página não existe</h1>
+    <h1>A página solicitada não existe!</h1>
 </body>
 </html>
